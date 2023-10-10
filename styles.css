@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+@font-face {
+    font-family: 'SchoolCursive';
+    src: url(Fonts/SchoolCursive.ttf);
+}
+
+body {
+    font-family: 'Gill Sans', 'Arial', sans-serif;
+    font-size: 1rem;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    height: 100vh;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Images/cole-keister-rydTSO7xB5A-unsplash.jpg);
+    background-size: cover;
+    background-position: right center;
+}
+
+header .company-name {
+    font-family: 'SchoolCursive';
+    font-size: 4rem;
+}
+
+
+.main-content {
+    width: 55%;
+    height: 70%;
+    margin: 20%;
+    align-content: space-between;
+}
