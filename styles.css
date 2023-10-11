@@ -1,3 +1,16 @@
+:root {
+    --type-color: #474747;
+    --accent-color: #C94E08;
+    --button-color: #C94E08;
+    --border-color: #b9b9b9;
+    --invalid-color: #df0808;
+}
+
+@font-face {
+    font-family: 'HighSpirited';
+    src: url(Fonts/High-Spirited.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,15 +18,11 @@
     vertical-align: baseline;
 }
 
-@font-face {
-    font-family: 'SchoolCursive';
-    src: url(Fonts/SchoolCursive.ttf);
-}
-
 body {
-    font-family: 'Gill Sans', 'Arial', sans-serif;
-    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8rem;
     line-height: 2rem;
+    color: var(--type-color);
 }
 
 .container {
@@ -24,57 +33,72 @@ body {
 header {
     width: 30%;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(Images/cole-keister-rydTSO7xB5A-unsplash.jpg);
+    text-align: center;
+    background-image: url(Images/stories-mFTOFzUKdl0-unsplash.jpeg);
     background-size: cover;
-    background-position: right center;
 }
 
 header .company-name {
-    font-family: 'SchoolCursive';
-    font-size: 4rem;
+    font-family: 'HighSpirited';
+    font-size: 5rem;
     line-height: 4rem;
-    color: #FFF;
+    margin-top: 220px;
 }
 
-
 .content-wrapper {
+    position: relative;
     width: 70%;
     height: 100vh;
     display: flex;
     align-items: center;
-    background-color: #CFCBCC;
 }
 
 .main-content {
     width: 60%;
-    margin-left: 80px;
+    margin-left: 100px;
 }
 
 .intro {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
     margin-bottom: 40px;
+}
+
+.intro:nth-child(1) {
+    font-family: 'HighSpirited';
+    font-size: 6rem;
+    color: var(--accent-color);
+    margin-left: -20px;
 }
 
 .form-line {
     display: flex;
     flex-direction: column;
+    width: 300px;
+    column-gap: 10px;
     margin: 10px 0;
 }
 
-form label {
-    font-size: 0.8rem;
+label {
+    font-size: 0.7rem;
     text-transform: uppercase;
     margin-bottom: -4px;
 }
 
+label[class='req']::before {
+    content: '* ';
+    color: var(--accent-color);
+}
+
 .form-line input {
     width: 100%;
-    font-size: 1.8rem;
-    border: 1px solid #b9b9b9;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
+    padding: 10px;
+}
+
+.form-line input:invalid {
+    border: 1px solid var(--invalid-color);
 }
 
 form {
@@ -94,12 +118,23 @@ form {
     border: none;
     border-radius: 4px;
     padding: 12px 60px;
-    background-color: #940108;
+    background-color: var(--button-color);
     color: #FFF;
     margin-top: 40px;
     margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .submit a {
-    color: #940108;
+    color: var(--accent-color);
+}
+
+.subtext {
+    font-size: 0.6rem;
+}
+
+.credit {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
 }
